@@ -13,3 +13,191 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	background-color: #ebedf1;
+	font-family: 'Helvetica', sans-serif;
+}
+
+header{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.image{
+	margin:10px;
+}
+
+.content{ 	
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+}
+
+.formulaire_content{
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	background-color: white;
+ 	border: 0.5px solid rgba(138,140,148,0.5);
+ 	min-height: 700px;
+ 	min-width: 370px;
+ 	border-radius: 3px;
+}
+
+.entete{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	justify-self: self-start;
+	height: 20%;
+	border-bottom: 0.5px solid #8b8e95;
+	width: 80%;
+}
+
+
+.entete_nom{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: #8b8e95;
+	padding: 3px;
+}
+
+
+
+ .formulaire{
+ 	height: 400px;
+ 	width: 100%;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+}
+
+  .new_user{
+  	color: rgba(138,140,148,0.9);
+  	display: flex;
+  	flex-direction: column;
+ 	align-items: : center;
+ 	height: 100%;
+ 	width: 80%;
+
+  }
+
+  .field{
+  	margin-bottom: 20px;
+  }
+
+  .button{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	background-color: #0069CC;
+	border-radius: 5px;
+	border-style: none;
+	min-height: 44px;
+	color: white;
+	margin: 0;
+	min-width: 120px;
+	cursor:pointer;
+  }  
+
+  .lock{margin-right: 5px;}
+
+  .barre_field{
+  	width: 100%;
+  	min-height: 30px;
+  	border:0.5px solid rgba(138,140,148,0.5);
+  	border-radius: 2px;
+  }
+
+.text{
+	text-align: center;
+	padding: 0px 40px 0px 40px;
+	margin-bottom: 20px;
+	color: rgba(138,140,148,1);
+  	font-size: 12px;
+  		
+}
+
+#text0{
+	margin:0;	
+	justify-content: center;
+	max-width: 15%;
+	
+}
+
+ #text1{
+  	
+  	
+  	font-size: 26px;
+  	margin-top: 20px;
+
+}
+
+#text2{
+	font-size: 14px;
+	color: rgba(138,140,148,0.6);
+}
+
+.text p{
+	margin:0;
+}
+
+
+
+a{
+  	color:#0069CC;
+  	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a:visited{
+	color: #0069CC;
+}
+
+
+
+.button a{
+	color: white;
+}
+
+footer{
+	margin-top: 20px;
+	text-align: center;
+	color: rgba(138,140,148,1);
+	font-size: 12px;
+}
+
+.liens_footer{
+	display: flex;
+	justify-content: center;
+	
+
+}
+ 
+ul{
+	list-style: none;
+	width: 8%;
+	display: flex;	
+	justify-content: space-between;
+ }
+
+ li a{
+ 	color: rgba(138,140,148,1);
+ }
+
+li a:visited{
+	color: rgba(138,140,148,1);
+}
+
+footer img{
+	width: auto;
+	height: 30px;
+}

@@ -1,34 +1,106 @@
-<h2>Sign up</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <header>
+    <div class="text" id="text0">
+      <p>Already have an Intuit account?</p>
+      <p><a href="https://accounts.intuit.com/account-recovery.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event">I forgot my User ID or Password</a></p>
+    </div>
+    <div class="button"><%= image_submit_tag("lock.png")%><%= render "devise/shared/links" %></div> 
+  </header>
+  
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+
+
+  <div class="content">
+
+    <div class="image"> <%=image_tag("intuit.png")%></div>
+
+    <div class="formulaire_content">
+
+      <div class="entete">
+
+        <div class="entete_nom">
+          <%=image_tag("turbotax.png", size:"32")%>
+          <p>turbotax</p>
+        </div>
+        <div class="entete_nom">
+          <%=image_tag("quickbooks.png", size:"32")%>
+          <p>quickbooks</p>
+        </div>
+        <div class="entete_nom">
+          <%=image_tag("mint.png", size:"32")%>
+          <p>mint</p>
+        </div>
+
+      </div>
+
+      <div class="text" id="text1">
+        <p>One Account.</p>
+        <p>Everything Intuit.</p>
+      </div>
+      <div class="text" id="text2">
+        <span>Create an account for all of Intuit's products </br> including Mint. </span><a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a>
+      </div>
+
+      <div class="formulaire">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, class:"barre_field" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :phone %><br />
+          <%= f.text_field :phone, autofocus: true, class:"barre_field" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", class:"barre_field" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class:"barre_field" %>
+        </div>
+
+
+
+        <div class="actions">
+          <div class="button">
+            <div class="lock"> <%= image_submit_tag("lock.png")%></div><span>Create Account</span>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="text"><p>By clicking Sign In, you agree to our</p>
+        <p><a href="https://www.mint.com/terms">License Agreement</a> and <a href="https://security.intuit.com/privacy">Privacy Statement</a>.</p>
+      </div>
+    </div>
   </div>
+  <footer>
+     <%=image_tag("intuit.png")%>
+    <div class="liens_footer">
+      <ul>
+        <li><a href="color: rgba(138,140,148,1);">Legal</a></li>
+        <li><a href="https://security.intuit.com/index.php/privacy">Privacy</a></li>
+        <li><a href="https://security.intuit.com/">Security</a></li>
+      </ul>
+    </div>
+    © 2017 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br/>
+    Terms and conditions, features, support, pricing, and service options subject to change without notice.</footer>
+  </body>
+  </html>
 
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  
