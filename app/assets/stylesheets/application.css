@@ -108,7 +108,17 @@ header{
 	cursor:pointer;
   }  
 
-  .lock{margin-right: 5px;}
+  .lock{
+  	margin-right: 5px;
+  }
+
+  .bouton{
+  	width: 100%;
+  	background-color: #0069CC;
+  	border:none;
+  	color: white;
+  	font-size: 16px;
+  }
 
   .barre_field{
   	width: 100%;
